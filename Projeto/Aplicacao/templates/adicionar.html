@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://static.wikia.nocookie.net/pokemon-fano/images/6/6f/Poke_Ball.png/revision/latest?cb=20140520015336" type="image/x-icon">
+    <title>PokéDex - Adicionar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'adicionar.css' %}">
+</head>
+<body>
+    <main>
+        <h1>Adicionar Pokémon</h1>
+        <form action="{% url 'aplicacao:add' %}" method="POST">
+            {% csrf_token %}
+            
+            <div class="inputdiv">
+                <label for="nome">Nome*:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome" required>
+            </div>
+            
+            <div class="inputdiv">
+                <label for="tipo1">Tipo 1*:</label>
+                <select name="tipo1" id="tipo1" required>
+                    <option value="">-- Selecione o Tipo 1 --</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Fogo">Fogo</option>
+                    <option value="Água">Água</option>
+                    <option value="Elétrico">Elétrico</option>
+                    <option value="Planta">Planta</option>
+                    <option value="Gelo">Gelo</option>
+                    <option value="Lutador">Lutador</option>
+                    <option value="Venenoso">Venenoso</option>
+                    <option value="Terrestre">Terrestre</option>
+                    <option value="Voador">Voador</option>
+                    <option value="Psíquico">Psíquico</option>
+                    <option value="Inseto">Inseto</option>
+                    <option value="Pedra">Pedra</option>
+                    <option value="Fantasma">Fantasma</option>
+                    <option value="Dragão">Dragão</option>
+                    <option value="Sombrio">Sombrio</option>
+                    <option value="Aço">Aço</option>
+                    <option value="Fada">Fada</option>
+                </select>
+            </div>
+            
+            <div class="inputdiv">
+                <label for="tipo2">Tipo 2:</label>
+                <select name="tipo2" id="tipo2">
+                    <option value="">-- Selecione o Tipo 2 (Opcional) --</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Fogo">Fogo</option>
+                    <option value="Água">Água</option>
+                    <option value="Elétrico">Elétrico</option>
+                    <option value="Planta">Planta</option>
+                    <option value="Gelo">Gelo</option>
+                    <option value="Lutador">Lutador</option>
+                    <option value="Venenoso">Venenoso</option>
+                    <option value="Terrestre">Terrestre</option>
+                    <option value="Voador">Voador</option>
+                    <option value="Psíquico">Psíquico</option>
+                    <option value="Inseto">Inseto</option>
+                    <option value="Pedra">Pedra</option>
+                    <option value="Fantasma">Fantasma</option>
+                    <option value="Dragão">Dragão</option>
+                    <option value="Sombrio">Sombrio</option>
+                    <option value="Aço">Aço</option>
+                    <option value="Fada">Fada</option>
+                </select>
+            </div>
+        
+            <div class="inputdiv">
+                <label for="hp">Pontos de Vida*:</label>
+                <input type="number" name="hp" id="hp" min="1" placeholder="Digite o HP" required>
+            </div>
+            
+            <div class="inputdiv">
+                <label for="altura">Altura(m)*:</label>
+                <input type="number" name="altura" id="altura" step="0.01" placeholder="Digite a altura" required>
+            </div>
+            
+            <div class="inputdiv">
+                <label for="peso">Peso(kg)*:</label>
+                <input type="number" name="peso" id="peso" step="0.01" placeholder="Digite o peso" required>
+            </div>
+            
+            <div class="inputdiv">
+                <label for="imagem">URL da Imagem*:</label>
+                <input type="url" name="imagem" id="imagem" placeholder="Digite a URL da imagem" required>
+            </div>
+
+            <div class="inputdiv" id="txtArea">
+                <label for="descricao">Descrição*:</label>
+                <textarea name="descricao" id="descricao" rows="4"  required></textarea>
+            </div>
+        
+            <div>
+                <button type="submit">ADICIONAR</button>
+            </div>
+        </form>
+        
+    </main>
+</body>
+</html>

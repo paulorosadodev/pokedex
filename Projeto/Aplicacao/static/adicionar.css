@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    width: 100%;
+    height: 100dvh;
+    background-image: url('https://wallpapercat.com/w/full/5/f/3/2120472-3840x2160-desktop-4k-pokemon-background-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header > img {
+    width: 18.625rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+main {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(225, 224, 224, 0.95));
+    width: 60%;
+    height: 85dvh;
+    top: 50px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.316);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+main h1 {
+    position: absolute;
+    top: 20px;
+    font-size: 20px;
+    color: #17285E;
+}
+
+form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #17285E;
+}
+
+form button {
+    margin-top: 10px;
+    background-color: #FFCE31;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    color: #17285E;
+    transition: all .3s;
+}
+
+label {
+    font-weight: 600;
+}
+
+form button:hover {
+    background-color: #f6be05;
+    cursor: pointer;
+}
+
+input {
+    flex: 1;
+    height: 30px;
+    padding-left: 5px;
+}
+
+select {
+    flex: 1;
+}
+
+.inputdiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+textarea {
+    resize: none;
+    flex: 1;
+}
+
+#txtArea {
+    display: flex;
+    align-items: baseline;
+}
